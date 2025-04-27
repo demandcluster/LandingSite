@@ -36,7 +36,7 @@ export function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105">
-          <Image src="/logo.svg" alt="Demand Cluster Logo" width={180} height={40} priority />
+          <Image src="/logo.svg" alt="Demand Cluster Logo" width={240} height={60} priority />
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link
