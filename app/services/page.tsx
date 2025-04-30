@@ -1,12 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, BarChart3, Globe, Users, Layers, MessageSquare, CheckCircle } from "lucide-react"
+import { ArrowRight, Server, Code, Cloud, Database, Users, BrainCircuit, CheckCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AnimatedSection } from "@/components/animated-section"
 import { StaggeredChildren } from "@/components/staggered-children"
+import { ExperienceTimeline } from "@/components/experience-timeline"
+import { SecurityBadge } from "@/components/security-badge"
 
 export const metadata = {
   title: "Services - Demand Cluster",
@@ -22,7 +24,7 @@ export default function ServicesPage() {
           <AnimatedSection className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">Our Services</h1>
             <p className="mt-4 text-white/90 md:text-xl">
-              Comprehensive business solutions designed to help your business thrive in today's competitive landscape.
+              Comprehensive technology solutions designed to help your business thrive in today's competitive landscape.
             </p>
           </AnimatedSection>
         </div>
@@ -39,51 +41,52 @@ export default function ServicesPage() {
           </AnimatedSection>
 
           <Tabs defaultValue="all" className="w-full max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-7">
               <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="data">Data</TabsTrigger>
-              <TabsTrigger value="digital">Digital</TabsTrigger>
-              <TabsTrigger value="talent">Talent</TabsTrigger>
-              <TabsTrigger value="process">Process</TabsTrigger>
-              <TabsTrigger value="strategy">Strategy</TabsTrigger>
+              <TabsTrigger value="infrastructure">Infrastructure</TabsTrigger>
+              <TabsTrigger value="software">Software</TabsTrigger>
+              <TabsTrigger value="hosting">Hosting</TabsTrigger>
+              <TabsTrigger value="aws">Mini AWS</TabsTrigger>
+              <TabsTrigger value="consultancy">Consultancy</TabsTrigger>
+              <TabsTrigger value="ai">AI Solutions</TabsTrigger>
             </TabsList>
             <TabsContent value="all" className="mt-8">
               <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card className="transition-all hover:shadow-md hover:-translate-y-1">
                   <CardHeader>
                     <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
-                      <BarChart3 className="h-6 w-6" />
+                      <Server className="h-6 w-6" />
                     </div>
-                    <CardTitle>Data Analytics</CardTitle>
-                    <CardDescription>Transform raw data into actionable insights</CardDescription>
+                    <CardTitle>Infrastructure Solutions</CardTitle>
+                    <CardDescription>Robust and scalable infrastructure for your business</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Our data analytics services help you make sense of your data, identify patterns, and make informed
-                      decisions that drive business growth.
+                      Our infrastructure solutions provide the foundation for your digital transformation, ensuring
+                      reliability, scalability, and security for your business operations.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Predictive analytics</span>
+                        <span>Network architecture design</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Business intelligence</span>
+                        <span>Server optimization</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Data visualization</span>
+                        <span>Disaster recovery planning</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Custom reporting</span>
+                        <span>Infrastructure monitoring</span>
                       </li>
                     </ul>
                   </CardContent>
                   <CardFooter>
                     <Link
-                      href="/services/data-analytics"
+                      href="/services/infrastructure-solutions"
                       className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
                     >
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -94,38 +97,122 @@ export default function ServicesPage() {
                 <Card className="transition-all hover:shadow-md hover:-translate-y-1">
                   <CardHeader>
                     <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
-                      <Globe className="h-6 w-6" />
+                      <Code className="h-6 w-6" />
                     </div>
-                    <CardTitle>Digital Transformation</CardTitle>
-                    <CardDescription>Modernize your business processes</CardDescription>
+                    <CardTitle>Software House</CardTitle>
+                    <CardDescription>Custom software development for your needs</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      We help businesses leverage technology to streamline operations, enhance customer experiences, and
-                      stay competitive in the digital age.
+                      Our software development team creates custom applications tailored to your specific business
+                      requirements, from web and mobile apps to enterprise solutions.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Digital strategy development</span>
+                        <span>Custom application development</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Process automation</span>
+                        <span>Web and mobile solutions</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Cloud migration</span>
+                        <span>Legacy system modernization</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Digital customer experience</span>
+                        <span>Quality assurance and testing</span>
                       </li>
                     </ul>
                   </CardContent>
                   <CardFooter>
                     <Link
-                      href="/services/digital-transformation"
+                      href="/services/software-house"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
+                    >
+                      Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </Card>
+
+                <Card className="transition-all hover:shadow-md hover:-translate-y-1">
+                  <CardHeader>
+                    <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
+                      <Cloud className="h-6 w-6" />
+                    </div>
+                    <CardTitle>Hosting Solutions</CardTitle>
+                    <CardDescription>Reliable and secure hosting for your applications</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      We provide reliable, secure, and scalable hosting solutions for your websites and applications,
+                      ensuring optimal performance and uptime.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Managed hosting services</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Cloud hosting solutions</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Performance optimization</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>24/7 monitoring and support</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Link
+                      href="/services/hosting-solutions"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
+                    >
+                      Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </Card>
+
+                <Card className="transition-all hover:shadow-md hover:-translate-y-1">
+                  <CardHeader>
+                    <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
+                      <Database className="h-6 w-6" />
+                    </div>
+                    <CardTitle>Mini AWS Solutions</CardTitle>
+                    <CardDescription>Simplified cloud infrastructure for businesses</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Our Mini AWS platform provides enterprise-grade cloud capabilities tailored for small to medium
+                      businesses, with simplified management and cost-effective pricing.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Simplified cloud infrastructure</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Scalable computing resources</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Managed database services</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span>Cost-effective cloud solutions</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Link
+                      href="/services/mini-aws"
                       className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
                     >
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -138,36 +225,36 @@ export default function ServicesPage() {
                     <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
                       <Users className="h-6 w-6" />
                     </div>
-                    <CardTitle>Talent Solutions</CardTitle>
-                    <CardDescription>Find and retain the right talent</CardDescription>
+                    <CardTitle>Consultancy</CardTitle>
+                    <CardDescription>Expert advice on technology strategy</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Our talent solutions help you attract, develop, and retain top talent to drive your business
-                      forward in today's competitive market.
+                      Our consultancy services provide expert guidance to help you navigate complex technology
+                      challenges and make informed decisions for your business.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Talent acquisition</span>
+                        <span>Technology strategy development</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Workforce planning</span>
+                        <span>Digital transformation roadmaps</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Employee development</span>
+                        <span>IT assessment and optimization</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Retention strategies</span>
+                        <span>Technology vendor selection</span>
                       </li>
                     </ul>
                   </CardContent>
                   <CardFooter>
                     <Link
-                      href="/services/talent-solutions"
+                      href="/services/consultancy"
                       className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
                     >
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -178,122 +265,38 @@ export default function ServicesPage() {
                 <Card className="transition-all hover:shadow-md hover:-translate-y-1">
                   <CardHeader>
                     <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
-                      <Layers className="h-6 w-6" />
+                      <BrainCircuit className="h-6 w-6" />
                     </div>
-                    <CardTitle>Process Optimization</CardTitle>
-                    <CardDescription>Streamline operations and reduce costs</CardDescription>
+                    <CardTitle>AI Solutions</CardTitle>
+                    <CardDescription>Intelligent automation for your business</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      We help businesses identify inefficiencies, streamline workflows, and implement best practices to
-                      improve operational performance.
+                      Our AI solutions help businesses leverage artificial intelligence and machine learning to automate
+                      processes, gain insights, and create innovative customer experiences.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Process mapping and analysis</span>
+                        <span>AI strategy and implementation</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Lean methodology implementation</span>
+                        <span>Machine learning models</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Continuous improvement</span>
+                        <span>Natural language processing</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Performance measurement</span>
+                        <span>Predictive analytics</span>
                       </li>
                     </ul>
                   </CardContent>
                   <CardFooter>
                     <Link
-                      href="/services/process-optimization"
-                      className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
-                    >
-                      Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="transition-all hover:shadow-md hover:-translate-y-1">
-                  <CardHeader>
-                    <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
-                      <MessageSquare className="h-6 w-6" />
-                    </div>
-                    <CardTitle>Strategic Consulting</CardTitle>
-                    <CardDescription>Expert advice on strategic decisions</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Our strategic consulting services provide expert guidance to help you navigate complex business
-                      challenges and seize new opportunities.
-                    </p>
-                    <ul className="mt-4 space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Strategic planning</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Market analysis</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Competitive positioning</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Growth strategies</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/services/strategic-consulting"
-                      className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
-                    >
-                      Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="transition-all hover:shadow-md hover:-translate-y-1">
-                  <CardHeader>
-                    <div className="rounded-full bg-blue-100 p-2 w-fit text-blue-600 dark:bg-blue-900 dark:text-blue-300 mb-4">
-                      <CheckCircle className="h-6 w-6" />
-                    </div>
-                    <CardTitle>Quality Assurance</CardTitle>
-                    <CardDescription>Ensure highest standards of quality</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Our quality assurance services help you implement robust quality management systems to ensure your
-                      products and services meet the highest standards.
-                    </p>
-                    <ul className="mt-4 space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Quality management systems</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Process auditing</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Compliance management</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
-                        <span>Continuous improvement</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/services/quality-assurance"
+                      href="/services/ai-solutions"
                       className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-all hover:translate-x-1"
                     >
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -304,11 +307,29 @@ export default function ServicesPage() {
             </TabsContent>
 
             {/* Other tab contents would be similar but filtered by category */}
-            <TabsContent value="data" className="mt-8">
-              {/* Data Analytics service card */}
+            <TabsContent value="infrastructure" className="mt-8">
+              {/* Infrastructure service cards */}
             </TabsContent>
             {/* Additional tab contents */}
           </Tabs>
+        </div>
+      </section>
+
+      {/* 60 Years Experience Section */}
+      <section className="w-full py-12 md:py-16 bg-muted/50">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection className="mx-auto max-w-3xl text-center mb-12">
+            <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+              60 Years of Excellence
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight mt-2">Six Decades of Technology Leadership</h2>
+            <p className="mt-4 text-muted-foreground md:text-lg">
+              With 60 years of experience in the technology industry, we've helped countless businesses transform,
+              innovate, and succeed through changing technological landscapes.
+            </p>
+          </AnimatedSection>
+
+          <ExperienceTimeline />
         </div>
       </section>
 
@@ -391,6 +412,24 @@ export default function ServicesPage() {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* Security Section */}
+      <section className="w-full py-12 md:py-16">
+        <div className="container px-4 md:px-6">
+          <AnimatedSection className="mx-auto max-w-3xl text-center mb-12">
+            <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+              Security First
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight mt-2">Enterprise-Grade Security</h2>
+            <p className="mt-4 text-muted-foreground md:text-lg">
+              We implement industry-leading security practices to protect your data, applications, and infrastructure
+              from threats and vulnerabilities.
+            </p>
+          </AnimatedSection>
+
+          <SecurityBadge />
         </div>
       </section>
 
