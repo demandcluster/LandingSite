@@ -16,11 +16,10 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <AnimatedSection direction="left" className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
-                  Accelerate Your Business Growth
+                  Transform Your E-commerce Experience
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                  Demand Cluster helps businesses optimize their operations, increase efficiency, and drive sustainable
-                  growth through innovative solutions.
+                  We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-white dark:text-blue-700 dark:hover:bg-gray-200 transition-transform hover:scale-105">
@@ -28,7 +27,7 @@ export default function Home() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10 transition-transform hover:scale-105"
+                    className="border-white text-white bg-white/10 transition-transform hover:scale-105"
                   >
                     Learn More
                   </Button>
@@ -58,10 +57,9 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                   Our Services
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Comprehensive Business Solutions</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">E-commerce Development Solutions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a wide range of services designed to help your business thrive in today's competitive
-                  landscape.
+                  From custom online stores to marketplace platforms, we deliver end-to-end e-commerce solutions that help businesses thrive in the digital marketplace.
                 </p>
               </div>
             </AnimatedSection>
@@ -101,12 +99,10 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Who We Are</h2>
                 <p className="text-muted-foreground md:text-lg/relaxed">
-                  Demand Cluster is a leading business solutions provider dedicated to helping organizations optimize
-                  their operations, increase efficiency, and drive sustainable growth.
+                  We are a team of e-commerce experts dedicated to building innovative online shopping experiences. With years of experience in developing platforms for major retailers, we understand what it takes to create successful e-commerce solutions.
                 </p>
                 <p className="text-muted-foreground md:text-lg/relaxed">
-                  Our team of experts brings together diverse skills and experience across industries to deliver
-                  innovative solutions tailored to your unique business needs.
+                  Our portfolio includes successful implementations for leading brands, demonstrating our ability to deliver scalable, secure, and user-friendly e-commerce platforms.
                 </p>
                 <div className="pt-4">
                   <Link href="/about">
@@ -128,9 +124,9 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                   Our Approach
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How We Deliver Results</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How We Build Success</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our proven methodology ensures we deliver consistent results for our clients.
+                  We combine cutting-edge technology with deep e-commerce expertise to create platforms that drive sales and delight customers.
                 </p>
               </div>
             </AnimatedSection>
@@ -156,44 +152,44 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Insights</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Stay updated with the latest trends, insights, and thought leadership from our experts.
+                  Stay updated with the latest trends in e-commerce development, digital retail, and online shopping experiences.
                 </p>
               </div>
             </AnimatedSection>
 
             <StaggeredChildren className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <BlogCard
-                title="Transforming Business Operations with Data-Driven Insights"
-                excerpt="Discover how leading companies are leveraging data analytics to transform their operations and drive growth."
+                title="The Future of E-commerce: AI and Personalization"
+                excerpt="Discover how artificial intelligence is revolutionizing online shopping experiences and customer engagement."
                 image="/placeholder.svg?height=200&width=300"
-                category="Business"
+                category="E-commerce"
                 date="April 15, 2023"
                 author="Sarah Johnson"
-                authorRole="Chief Data Officer"
+                authorRole="E-commerce Strategist"
                 authorImage="/placeholder.svg?height=40&width=40"
-                slug="transforming-business-operations"
+                slug="future-of-ecommerce-ai"
               />
               <BlogCard
-                title="The Future of Digital Transformation"
-                excerpt="How businesses can prepare for the next wave of digital innovation and stay ahead of the competition."
+                title="Building Scalable E-commerce Platforms"
+                excerpt="Learn the key strategies for creating e-commerce platforms that can handle growing traffic and sales."
                 image="/placeholder.svg?height=200&width=300"
-                category="Tech"
+                category="Development"
                 date="March 28, 2023"
                 author="Michael Chen"
-                authorRole="CTO"
+                authorRole="Lead Developer"
                 authorImage="/placeholder.svg?height=40&width=40"
-                slug="future-of-digital-transformation"
+                slug="scalable-ecommerce-platforms"
               />
               <BlogCard
-                title="Building Resilient Supply Chains"
-                excerpt="Strategies for creating adaptable and resilient supply chains that can withstand global disruptions."
+                title="Optimizing Mobile Shopping Experience"
+                excerpt="Best practices for creating seamless mobile shopping experiences that convert visitors into customers."
                 image="/placeholder.svg?height=200&width=300"
-                category="Business"
+                category="UX Design"
                 date="March 15, 2023"
                 author="Emily Rodriguez"
-                authorRole="Supply Chain Director"
+                authorRole="UX Designer"
                 authorImage="/placeholder.svg?height=40&width=40"
-                slug="building-resilient-supply-chains"
+                slug="mobile-shopping-experience"
               />
             </StaggeredChildren>
 
@@ -216,9 +212,9 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                   Testimonials
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Client Success Stories</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Don't just take our word for it. Here's what our clients have to say about working with us.
+                  See how we've helped businesses transform their online presence and achieve remarkable growth.
                 </p>
               </div>
             </AnimatedSection>
@@ -238,10 +234,9 @@ export default function Home() {
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 gradient">
           <div className="container px-4 md:px-6">
             <AnimatedSection className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">Ready to Get Started?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">Ready to Launch Your E-commerce Success?</h2>
               <p className="mt-4 text-white/90 md:text-xl">
-                Contact us today to schedule a consultation and discover how our services can help you achieve your
-                business goals.
+                Let's discuss how we can help you build a powerful e-commerce platform that drives sales and delights your customers.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/contact">

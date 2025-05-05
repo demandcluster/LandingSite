@@ -12,8 +12,7 @@ export function Footer() {
               <Image src="/logo.svg" alt="Demand Cluster Logo" width={150} height={30} priority />
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Demand Cluster helps businesses optimize their operations, increase efficiency, and drive sustainable
-              growth through innovative solutions.
+              We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience. From custom online stores to marketplace platforms, we deliver end-to-end solutions for businesses of all sizes.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-blue-600 transition-colors">
@@ -39,50 +38,50 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services#data-analytics"
+                  href="/services#infrastructure"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Data Analytics
+                  Infrastructure Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#digital-transformation"
+                  href="/services#software"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Digital Transformation
+                  Software House
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#talent-solutions"
+                  href="/services#hosting"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Talent Solutions
+                  Hosting Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#process-optimization"
+                  href="/services#aws"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Process Optimization
+                  Mini AWS Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#strategic-consulting"
+                  href="/services#consultancy"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Strategic Consulting
+                  Consultancy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#quality-assurance"
+                  href="/services#ai"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Quality Assurance
+                  AI Solutions
                 </Link>
               </li>
             </ul>
