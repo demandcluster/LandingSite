@@ -23,8 +23,7 @@ export default function AboutUsPage() {
               About Demand Cluster
             </h1>
             <p className="mt-4 text-white/90 md:text-xl">
-              For over 60 years, we've been at the forefront of technology innovation, helping businesses transform,
-              adapt, and thrive in an ever-changing digital landscape.
+              Pioneering the future of AI relationships, we create technology that understands human emotions and builds genuine connections.
             </p>
           </AnimatedSection>
         </div>
@@ -38,22 +37,15 @@ export default function AboutUsPage() {
               <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                 Our Story
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Six Decades of Excellence</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Story</h2>
               <p className="text-muted-foreground md:text-lg/relaxed">
-                Founded in 1963, Demand Cluster began as a small technology consulting firm with a vision to help
-                businesses harness the power of emerging technologies. What started as a team of five passionate
-                technologists has grown into a global technology solutions provider with offices in 15 countries and
-                over 1,000 employees worldwide.
+                Founded in 2020, Demand Cluster emerged from a vision to revolutionize how humans interact with artificial intelligence. We recognized that while AI technology was advancing rapidly, there was a crucial gap in emotional intelligence and genuine human connection.
               </p>
               <p className="text-muted-foreground md:text-lg/relaxed">
-                Throughout our 60-year journey, we've witnessed and participated in the evolution of technology—from
-                mainframes to cloud computing, from basic automation to artificial intelligence. At each step, we've
-                helped our clients navigate technological shifts and leverage innovations to create business value.
+                Our journey began with a simple yet profound question: How can we create AI that not only understands human emotions but also responds to them in a way that feels authentic and meaningful? This question has guided our development of innovative AI relationship solutions.
               </p>
               <p className="text-muted-foreground md:text-lg/relaxed">
-                Today, Demand Cluster stands as a testament to resilience, innovation, and unwavering commitment to
-                client success. Our rich history provides us with unique insights that inform our forward-thinking
-                approach to technology solutions.
+                Today, we stand at the forefront of emotional AI technology, helping people build meaningful relationships with technology that complements their human connections. Our solutions provide safe spaces for emotional expression, understanding, and growth.
               </p>
             </AnimatedSection>
             <AnimatedSection direction="right" delay={0.2} className="flex justify-center">
@@ -111,10 +103,7 @@ export default function AboutUsPage() {
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Mission & Values</h2>
               <p className="text-muted-foreground md:text-lg/relaxed">
-                Our mission is to empower organizations to achieve their full potential through innovative technology
-                solutions that drive growth, efficiency, and competitive advantage. We believe in building lasting
-                partnerships with our clients, understanding their unique challenges, and delivering solutions that
-                create measurable business value.
+                Our mission is to create AI solutions that enhance human emotional well-being by providing genuine understanding, support, and companionship. We believe in building technology that respects human emotions and creates meaningful connections that enrich people's lives.
               </p>
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
@@ -122,10 +111,9 @@ export default function AboutUsPage() {
                     <CheckCircle className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-medium">Excellence</p>
+                    <p className="font-medium">Emotional Intelligence</p>
                     <p className="text-sm text-muted-foreground">
-                      We strive for excellence in everything we do, setting high standards and continuously raising the
-                      bar.
+                      We prioritize understanding and responding to human emotions with sensitivity and authenticity.
                     </p>
                   </div>
                 </div>
@@ -134,10 +122,9 @@ export default function AboutUsPage() {
                     <CheckCircle className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-medium">Innovation</p>
+                    <p className="font-medium">Ethical AI</p>
                     <p className="text-sm text-muted-foreground">
-                      We embrace innovation, constantly seeking new ideas and approaches to solve complex business
-                      challenges.
+                      We develop AI with strong ethical principles, ensuring user safety, privacy, and emotional well-being.
                     </p>
                   </div>
                 </div>
@@ -146,9 +133,9 @@ export default function AboutUsPage() {
                     <CheckCircle className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-medium">Integrity</p>
+                    <p className="font-medium">Human-Centered Design</p>
                     <p className="text-sm text-muted-foreground">
-                      We operate with the highest level of integrity, maintaining transparency and ethical standards.
+                      We put human needs and emotions at the center of our technology development.
                     </p>
                   </div>
                 </div>
@@ -157,10 +144,9 @@ export default function AboutUsPage() {
                     <CheckCircle className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-medium">Client Focus</p>
+                    <p className="font-medium">Continuous Learning</p>
                     <p className="text-sm text-muted-foreground">
-                      We put our clients at the center of everything we do, focusing on their success as our primary
-                      goal.
+                      We constantly evolve our understanding of human-AI relationships to create better experiences.
                     </p>
                   </div>
                 </div>
@@ -179,67 +165,52 @@ export default function AboutUsPage() {
             </div>
             <h2 className="text-3xl font-bold tracking-tight mt-2">Leadership Team</h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
-              Meet the experienced professionals who guide our company's strategic direction and growth.
+              Meet our experienced founders who bring decades of expertise in technology, security, and innovation.
             </p>
           </AnimatedSection>
 
-          <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="transition-all hover:shadow-md hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="CEO" fill className="object-cover" />
+                  <Image src="/placeholder.svg?height=128&width=128" alt="Ron van Etten" fill className="object-cover" />
                 </div>
-                <h3 className="text-xl font-bold mb-1">Sarah Johnson</h3>
-                <p className="text-blue-600 dark:text-blue-400 mb-3">Chief Executive Officer</p>
+                <h3 className="text-xl font-bold mb-1">Ron van Etten</h3>
+                <p className="text-blue-600 dark:text-blue-400 mb-3">Founder</p>
                 <p className="text-muted-foreground text-sm">
-                  With over 25 years of experience in technology leadership, Sarah drives our strategic vision and
-                  growth.
+                  Active as a developer since 1982, Ron brings over 40 years of programming expertise. Featured at Young Business'86 in Brussels and recognized as the youngest entrepreneur in Dutch Quote magazine. With a background in lighting/laser programming and web development, he has contributed to numerous open source projects and holds over 20 certificates in online security. Currently moderating the Mailchimp Open Commerce community and recognized by MongoDB for his contributions.
                 </p>
+                <div className="mt-4">
+                  <a href="https://profile.codersrank.io/user/rondlite" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">
+                    View Profile
+                  </a>
+                </div>
               </CardContent>
             </Card>
             <Card className="transition-all hover:shadow-md hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="CTO" fill className="object-cover" />
+                  <Image src="/placeholder.svg?height=128&width=128" alt="Gilbert Flechsig" fill className="object-cover" />
                 </div>
-                <h3 className="text-xl font-bold mb-1">Michael Chen</h3>
-                <p className="text-blue-600 dark:text-blue-400 mb-3">Chief Technology Officer</p>
+                <h3 className="text-xl font-bold mb-1">Gilbert Flechsig</h3>
+                <p className="text-blue-600 dark:text-blue-400 mb-3">Founder</p>
                 <p className="text-muted-foreground text-sm">
-                  Michael leads our technology strategy, ensuring we remain at the cutting edge of innovation.
+                  With a career spanning from mortgage software development to ethical hacking, Gilbert brings extensive experience in security and scalability. He successfully built and managed a text-based MMORPG with 10,000 concurrent users, created a news server community with 15 million users, and developed a recipe site with 28 million recipes. His expertise in efficiency, security, and rapid development has been instrumental in building successful platforms.
                 </p>
-              </CardContent>
-            </Card>
-            <Card className="transition-all hover:shadow-md hover:-translate-y-1">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="COO" fill className="object-cover" />
+                <div className="mt-4">
+                  <a href="https://receptengids.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">
+                    View Project
+                  </a>
                 </div>
-                <h3 className="text-xl font-bold mb-1">Emily Rodriguez</h3>
-                <p className="text-blue-600 dark:text-blue-400 mb-3">Chief Operations Officer</p>
-                <p className="text-muted-foreground text-sm">
-                  Emily oversees our global operations, ensuring excellence in service delivery across all regions.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="transition-all hover:shadow-md hover:-translate-y-1">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="CSO" fill className="object-cover" />
-                </div>
-                <h3 className="text-xl font-bold mb-1">David Kim</h3>
-                <p className="text-blue-600 dark:text-blue-400 mb-3">Chief Strategy Officer</p>
-                <p className="text-muted-foreground text-sm">
-                  David shapes our long-term strategy, identifying new opportunities for growth and innovation.
-                </p>
               </CardContent>
             </Card>
           </StaggeredChildren>
 
-          <AnimatedSection className="flex justify-center mt-8">
+          {/* <AnimatedSection className="flex justify-center mt-8">
             <Button className="bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
               Meet Our Full Team <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-          </AnimatedSection>
+          </AnimatedSection> */}
         </div>
       </section>
 
@@ -258,36 +229,36 @@ export default function AboutUsPage() {
 
           <AnimatedSection className="mb-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              <div className="flex justify-center p-4 grayscale hover:grayscale-0 transition-all">
+              <div className="flex justify-center p-4 transition-all">
                 <Image
-                  src="/placeholder.svg?height=80&width=200"
+                  src="/vd.svg?height=80&width=200"
                   alt="VD.nl"
                   width={200}
                   height={80}
                   className="object-contain h-16"
                 />
               </div>
-              <div className="flex justify-center p-4 grayscale hover:grayscale-0 transition-all">
+              <div className="flex justify-center p-4 transition-all">
                 <Image
-                  src="/placeholder.svg?height=80&width=200"
+                  src="/schiphol.svg?height=80&width=200"
                   alt="Schiphol.nl"
                   width={200}
                   height={80}
                   className="object-contain h-16"
                 />
               </div>
-              <div className="flex justify-center p-4 grayscale hover:grayscale-0 transition-all">
+              <div className="flex justify-center p-4 transition-all">
                 <Image
-                  src="/placeholder.svg?height=80&width=200"
+                  src="/tobeDressed.svg?height=80&width=200"
                   alt="To-Be-Dressed.nl"
                   width={200}
                   height={80}
                   className="object-contain h-16"
                 />
               </div>
-              <div className="flex justify-center p-4 grayscale hover:grayscale-0 transition-all">
+              <div className="flex justify-center p-4 transition-all">
                 <Image
-                  src="/placeholder.svg?height=80&width=200"
+                  src="/Charluv.png?height=80&width=200"
                   alt="Charluv.com"
                   width={200}
                   height={80}
@@ -447,7 +418,7 @@ export default function AboutUsPage() {
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 transition-transform hover:scale-105"
+                className="border-white text-white bg-white/10 transition-transform hover:scale-105"
               >
                 View Career Opportunities
               </Button>

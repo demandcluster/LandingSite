@@ -12,7 +12,7 @@ export function Footer() {
               <Image src="/logo.svg" alt="Demand Cluster Logo" width={150} height={30} priority />
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md">
-              We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience. From custom online stores to marketplace platforms, we deliver end-to-end solutions for businesses of all sizes.
+              We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience. From custom online stores to marketplace platforms, we deliver end-to-end solutions for businesses of all sizes. Featured in leading publications like Volkskrant for our innovative AI integration in e-commerce platforms.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-blue-600 transition-colors">

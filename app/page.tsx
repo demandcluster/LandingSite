@@ -16,10 +16,10 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <AnimatedSection direction="left" className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
-                  Transform Your E-commerce Experience
+                  Creating Meaningful AI Relationships
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                  We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience.
+                  We develop AI solutions that understand human emotions and create genuine connections, helping people build meaningful relationships with technology.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-white dark:text-blue-700 dark:hover:bg-gray-200 transition-transform hover:scale-105">
@@ -57,9 +57,9 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                   Our Services
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">E-commerce Development Solutions</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">AI Relationship Solutions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  From custom online stores to marketplace platforms, we deliver end-to-end e-commerce solutions that help businesses thrive in the digital marketplace.
+                  From emotional support to personal companionship, we create AI experiences that provide genuine understanding and meaningful connections.
                 </p>
               </div>
             </AnimatedSection>
@@ -99,10 +99,10 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Who We Are</h2>
                 <p className="text-muted-foreground md:text-lg/relaxed">
-                  We are a team of e-commerce experts dedicated to building innovative online shopping experiences. With years of experience in developing platforms for major retailers, we understand what it takes to create successful e-commerce solutions.
+                  We are pioneers in developing AI that understands and responds to human emotions. Our technology creates safe spaces for people to express themselves without judgment, offering constant support and understanding.
                 </p>
                 <p className="text-muted-foreground md:text-lg/relaxed">
-                  Our portfolio includes successful implementations for leading brands, demonstrating our ability to deliver scalable, secure, and user-friendly e-commerce platforms.
+                  We're helping people build meaningful connections with technology that complements their human relationships.
                 </p>
                 <div className="pt-4">
                   <Link href="/about">
@@ -159,15 +159,15 @@ export default function Home() {
 
             <StaggeredChildren className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <BlogCard
-                title="The Future of E-commerce: AI and Personalization"
-                excerpt="Discover how artificial intelligence is revolutionizing online shopping experiences and customer engagement."
+                title="The Future of AI Relationships"
+                excerpt="Discover how our AI technology is revolutionizing human-computer interaction and creating meaningful emotional connections."
                 image="/placeholder.svg?height=200&width=300"
-                category="E-commerce"
+                category="AI & Relationships"
                 date="April 15, 2023"
                 author="Sarah Johnson"
-                authorRole="E-commerce Strategist"
+                authorRole="AI Relationship Specialist"
                 authorImage="/placeholder.svg?height=40&width=40"
-                slug="future-of-ecommerce-ai"
+                slug="future-of-ai-relationships"
               />
               <BlogCard
                 title="Building Scalable E-commerce Platforms"

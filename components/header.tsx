@@ -51,12 +51,12 @@ export function Header() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             href="/approach"
             className={`text-sm font-medium ${isActive("/approach") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
           >
             Our Approach
-          </Link>
+          </Link> */}
           <Link
             href="/blog"
             className={`text-sm font-medium ${isActive("/blog") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
