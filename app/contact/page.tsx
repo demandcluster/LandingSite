@@ -1,4 +1,7 @@
+"use client"
+
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -7,13 +10,89 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { AnimatedSection } from "@/components/animated-section"
-
-export const metadata = {
-  title: "Contact - Demand Cluster",
-  description: "Get in touch with Demand Cluster to discuss how we can help your business grow.",
-}
+import { toast } from "@/components/ui/use-toast"
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    interest: "consultation",
+    message: "",
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      // Basic validation
+      if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+        toast({
+          title: "Validation Error",
+          description: "Please fill in all required fields.",
+          variant: "destructive",
+        })
+        return
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(formData.email)) {
+        toast({
+          title: "Invalid Email",
+          description: "Please enter a valid email address.",
+          variant: "destructive",
+        })
+        return
+      }
+
+      // Here you would typically send the form data to your backend
+      // For example:
+      // await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // })
+
+      toast({
+        title: "Success!",
+        description: "Your message has been sent. We'll get back to you soon.",
+      })
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        interest: "consultation",
+        message: "",
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleRadioChange = (value: string) => {
+    setFormData(prev => ({ ...prev, interest: value }))
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <section className="w-full py-12 md:py-16 lg:py-20 gradient">
@@ -37,32 +116,71 @@ export default function ContactPage() {
                   Fill out the form below and one of our experts will get back to you within 24 hours.
                 </p>
               </div>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="first-name">First name</Label>
-                    <Input id="first-name" placeholder="Enter your first name" />
+                    <Label htmlFor="firstName">First name *</Label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Enter your first name"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="last-name">Last name</Label>
-                    <Input id="last-name" placeholder="Enter your last name" />
+                    <Label htmlFor="lastName">Last name *</Label>
+                    <Input
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Enter your last name"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="Enter your email" />
+                  <Label htmlFor="email">Email *</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Enter your phone number"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="company">Company</Label>
-                  <Input id="company" placeholder="Enter your company name" />
+                  <Input
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Enter your company name"
+                  />
                 </div>
                 <div className="space-y-2">
-                  <Label>I'm interested in</Label>
-                  <RadioGroup defaultValue="consultation">
+                  <Label>I'm interested in *</Label>
+                  <RadioGroup
+                    value={formData.interest}
+                    onValueChange={handleRadioChange}
+                    className="flex flex-col space-y-2"
+                  >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="consultation" id="consultation" />
                       <Label htmlFor="consultation">Consultation</Label>
@@ -82,15 +200,29 @@ export default function ContactPage() {
                   </RadioGroup>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message">Message *</Label>
                   <Textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us about your project or inquiry"
                     className="min-h-[120px]"
+                    required
                   />
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
-                  <Send className="mr-2 h-4 w-4" /> Submit
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" /> Submit
+                    </>
+                  )}
                 </Button>
               </form>
             </AnimatedSection>
@@ -106,7 +238,7 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-blue-600 mt-0.5" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+31 (0)20 123 4567</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -121,11 +253,11 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">Address</p>
                       <p className="text-muted-foreground">
-                        123 Business Ave, Suite 500
+                        Diemermere 1
                         <br />
-                        San Francisco, CA 94107
+                        1112 TA Diemen
                         <br />
-                        United States
+                        Netherlands
                       </p>
                     </div>
                   </div>
@@ -143,7 +275,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle>Office Locations</CardTitle>
                   <CardDescription>Visit us at one of our global offices.</CardDescription>
@@ -182,7 +314,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
             </AnimatedSection>
           </div>
         </div>
@@ -270,7 +402,7 @@ export default function ContactPage() {
 
       <div className="w-full h-[400px] relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0968870204824!2d-122.39997368468215!3d37.78779997975723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807ded297e89%3A0xcfd1a22965d31c4b!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.1234567890123!2d4.987654321!3d52.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1234567890%3A0xabcdef1234567890!2sDiemermere%201%2C%201112%20TA%20Diemen!5e0!3m2!1sen!2snl!4v1234567890!5m2!1sen!2snl"
           width="100%"
           height="100%"
           style={{ border: 0 }}

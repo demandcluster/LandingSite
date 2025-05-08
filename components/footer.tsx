@@ -12,7 +12,7 @@ export function Footer() {
               <Image src="/logo.svg" alt="Demand Cluster Logo" width={150} height={30} priority />
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md">
-              We specialize in creating powerful, scalable, and user-friendly e-commerce solutions that drive sales and enhance customer experience. From custom online stores to marketplace platforms, we deliver end-to-end solutions for businesses of all sizes. Featured in leading publications like Volkskrant for our innovative AI integration in e-commerce platforms.
+              We specialize in creating AI solutions that understand and enhance human emotional well-being. Our technology builds genuine connections and provides meaningful support through advanced emotional intelligence. From personal AI companions to enterprise solutions, we're revolutionizing how humans interact with artificial intelligence.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-blue-600 transition-colors">
@@ -38,34 +38,34 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services#infrastructure"
+                  href="/services#ai-relationships"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Infrastructure Solutions
+                  AI Relationships
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#software"
+                  href="/services#emotional-intelligence"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Software House
+                  Emotional Intelligence
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#hosting"
+                  href="/services#ai-companions"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Hosting Solutions
+                  AI Companions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#aws"
+                  href="/services#enterprise-solutions"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Mini AWS Solutions
+                  Enterprise Solutions
                 </Link>
               </li>
               <li>
@@ -73,15 +73,15 @@ export function Footer() {
                   href="/services#consultancy"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  Consultancy
+                  AI Consultancy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#ai"
+                  href="/services#research"
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                  AI Solutions
+                  AI Research
                 </Link>
               </li>
             </ul>
@@ -127,14 +127,16 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
                 <span className="text-muted-foreground">
-                  123 Business Ave, Suite 500
+                  Diemermere 1
                   <br />
-                  San Francisco, CA 94107
+                  1112 TA Diemen
+                  <br />
+                  Netherlands
                 </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-blue-600" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+31 (0)20 123 4567</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-blue-600" />

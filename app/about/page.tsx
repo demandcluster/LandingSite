@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { CheckCircle, ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -173,7 +174,7 @@ export default function AboutUsPage() {
             <Card className="transition-all hover:shadow-md hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="Ron van Etten" fill className="object-cover" />
+                  <Image src="/founder1.png?height=128&width=128" alt="Ron van Etten" fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-1">Ron van Etten</h3>
                 <p className="text-blue-600 dark:text-blue-400 mb-3">Founder</p>
@@ -190,7 +191,7 @@ export default function AboutUsPage() {
             <Card className="transition-all hover:shadow-md hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-                  <Image src="/placeholder.svg?height=128&width=128" alt="Gilbert Flechsig" fill className="object-cover" />
+                  <Image src="/founder2.png?height=128&width=128" alt="Gilbert Flechsig" fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-1">Gilbert Flechsig</h3>
                 <p className="text-blue-600 dark:text-blue-400 mb-3">Founder</p>
@@ -413,12 +414,14 @@ export default function AboutUsPage() {
               hear from you.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-white dark:text-blue-700 dark:hover:bg-gray-200 transition-transform hover:scale-105">
-                Contact Us
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-white dark:text-blue-700 dark:hover:bg-gray-200 transition-transform hover:scale-105">
+                  Contact Us
+                </Button>
+              </Link>
               <Button
                 variant="outline"
-                className="border-white text-white bg-white/10 transition-transform hover:scale-105"
+                className="border-white text-white hover:bg-white/10 transition-transform hover:scale-105"
               >
                 View Career Opportunities
               </Button>
