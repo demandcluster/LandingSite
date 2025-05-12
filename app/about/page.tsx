@@ -421,7 +421,7 @@ export default function AboutUsPage() {
               </Link>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 transition-transform hover:scale-105"
+                className="border-white text-white bg-white/10 transition-transform hover:scale-105"
               >
                 View Career Opportunities
               </Button>
