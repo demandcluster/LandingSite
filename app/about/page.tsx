@@ -53,11 +53,12 @@ export default function AboutUsPage() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-lg bg-blue-500/20 blur-xl animate-pulse"></div>
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/about/company-history.jpg"
                   width={500}
                   height={400}
-                  alt="Company History"
+                  alt="Company History - AI Research and Development"
                   className="rounded-lg object-cover relative"
+                  priority
                 />
               </div>
             </AnimatedSection>
@@ -90,10 +91,10 @@ export default function AboutUsPage() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-lg bg-blue-500/20 blur-xl animate-pulse"></div>
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/about/mission-values.jpg"
                   width={500}
                   height={400}
-                  alt="Our Mission"
+                  alt="Our Mission and Values - Team Collaboration"
                   className="rounded-lg object-cover relative"
                 />
               </div>
@@ -392,10 +393,10 @@ export default function AboutUsPage() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-lg bg-blue-500/20 blur-xl animate-pulse"></div>
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/about/global-map.jpg"
                   width={500}
                   height={400}
-                  alt="Global Map"
+                  alt="Global Presence - Worldwide Impact"
                   className="rounded-lg object-cover relative"
                 />
               </div>

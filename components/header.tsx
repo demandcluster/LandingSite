@@ -51,12 +51,6 @@ export function Header() {
           >
             About
           </Link>
-          {/* <Link
-            href="/approach"
-            className={`text-sm font-medium ${isActive("/approach") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
-          >
-            Our Approach
-          </Link> */}
           <Link
             href="/blog"
             className={`text-sm font-medium ${isActive("/blog") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
@@ -64,10 +58,10 @@ export function Header() {
             Blog
           </Link>
           <Link
-            href="/testimonials"
-            className={`text-sm font-medium ${isActive("/testimonials") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
+            href="/portfolio"
+            className={`text-sm font-medium ${isActive("/blog") ? "text-blue-600" : "text-muted-foreground"} hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full`}
           >
-            Testimonials
+            Portfolio
           </Link>
           <Link
             href="/contact"
@@ -108,9 +102,8 @@ export function Header() {
                     </div>
                   </MobileNavItem>
                   <MobileNavItem href="/about" title="About" />
-                  <MobileNavItem href="/approach" title="Our Approach" />
                   <MobileNavItem href="/blog" title="Blog" />
-                  <MobileNavItem href="/testimonials" title="Testimonials" />
+                  <MobileNavItem href="/portfolio" title="Portfolio" />
                   <MobileNavItem href="/contact" title="Contact" />
                 </div>
                 <div className="mt-8 pt-4 border-t">

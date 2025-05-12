@@ -37,11 +37,12 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-lg bg-white/20 blur-xl animate-pulse"></div>
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/home/hero-image.jpg"
                     width={500}
                     height={400}
-                    alt="Hero Image"
+                    alt="AI Relationship Technology Interface"
                     className="rounded-lg object-cover relative"
+                    priority
                   />
                 </div>
               </AnimatedSection>
@@ -85,10 +86,10 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-lg bg-blue-500/20 blur-xl animate-pulse"></div>
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/home/about-image.jpg"
                     width={500}
                     height={400}
-                    alt="About Us"
+                    alt="Team Collaboration on AI Relationship Technology"
                     className="rounded-lg object-cover relative"
                   />
                 </div>
@@ -161,34 +162,34 @@ export default function Home() {
               <BlogCard
                 title="The Future of AI Relationships"
                 excerpt="Discover how our AI technology is revolutionizing human-computer interaction and creating meaningful emotional connections."
-                image="/placeholder.svg?height=200&width=300"
+                image="/home/blog-future-ai.jpg"
                 category="AI & Relationships"
                 date="April 15, 2023"
                 author="Sarah Johnson"
                 authorRole="AI Relationship Specialist"
-                authorImage="/placeholder.svg?height=40&width=40"
+                authorImage="/team/sarah-johnson-avatar.jpg"
                 slug="future-of-ai-relationships"
               />
               <BlogCard
                 title="Building Scalable E-commerce Platforms"
                 excerpt="Learn the key strategies for creating e-commerce platforms that can handle growing traffic and sales."
-                image="/placeholder.svg?height=200&width=300"
+                image="/home/blog-scalable-platforms.jpg"
                 category="Development"
                 date="March 28, 2023"
                 author="Michael Chen"
                 authorRole="Lead Developer"
-                authorImage="/placeholder.svg?height=40&width=40"
+                authorImage="/team/michael-chen-avatar.jpg"
                 slug="scalable-ecommerce-platforms"
               />
               <BlogCard
                 title="Optimizing Mobile Shopping Experience"
                 excerpt="Best practices for creating seamless mobile shopping experiences that convert visitors into customers."
-                image="/placeholder.svg?height=200&width=300"
+                image="/home/blog-mobile-experience.jpg"
                 category="UX Design"
                 date="March 15, 2023"
                 author="Emily Rodriguez"
                 authorRole="UX Designer"
-                authorImage="/placeholder.svg?height=40&width=40"
+                authorImage="/team/emily-rodriguez-avatar.jpg"
                 slug="mobile-shopping-experience"
               />
             </StaggeredChildren>
@@ -246,7 +247,7 @@ export default function Home() {
                 </Link>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 transition-transform hover:scale-105"
+                  className="border-white text-white bg-white/10 transition-transform hover:scale-105"
                 >
                   Schedule a Consultation
                 </Button>
