@@ -1,9 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedSection } from "@/components/animated-section"
 import { StaggeredChildren } from "@/components/staggered-children"
@@ -18,69 +16,60 @@ export default function BlogPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-16 lg:py-20 gradient">
+      <section className="w-full py-16 md:py-24 lg:py-32 gradient">
         <div className="container px-4 md:px-6">
           <AnimatedSection className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
-              Blog
+            <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl">
+              Insights & Analysis
             </h1>
-            <p className="mt-4 text-white/90 md:text-xl">
-              Latest insights and thought leadership from our experts.
+            <p className="mt-6 text-lg text-white/90 md:text-xl">
+              Expert perspectives on AI, technology, and business transformation.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <div className="relative w-full max-w-md">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/70" />
-                <Input
-                  placeholder="Search articles..."
-                  className="w-full bg-white/10 border-white/20 pl-10 text-white placeholder:text-white/70 focus-visible:ring-blue-400"
-                />
-              </div>
-              <Button className="w-full sm:w-auto bg-white text-blue-600 hover:bg-white/90">Search</Button>
-            </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="w-full py-12 md:py-16">
+      <section className="w-full py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             {/* Featured Post */}
-            <AnimatedSection direction="up" className="mb-12">
-              <div className="group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md">
+            <AnimatedSection direction="up" className="mb-16">
+              <div className="group relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow-lg transition-all hover:shadow-xl">
                 <div className="flex flex-col md:flex-row">
-                  <div className="relative h-60 w-full md:w-2/5">
+                  <div className="relative w-full md:w-2/5">
                     <Image
                       src="/home/blog-future-ai.jpg"
                       alt="Featured blog post"
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      priority
                     />
-                    <Badge className="absolute top-4 left-4 bg-blue-600 hover:bg-blue-700">Featured</Badge>
+                    <Badge className="absolute top-6 left-6 bg-blue-600 hover:bg-blue-700 text-sm px-4 py-1">Featured</Badge>
                   </div>
-                  <div className="flex flex-col justify-between p-6 md:w-3/5">
+                  <div className="flex flex-col justify-between p-8 md:w-3/5">
                     <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <Badge variant="outline">Business</Badge>
-                        <span className="text-xs text-muted-foreground">April 15, 2023</span>
+                      <div className="flex items-center gap-3 mb-4">
+                        <Badge variant="outline" className="text-sm">Business</Badge>
+                        <span className="text-sm text-muted-foreground">April 15, 2023</span>
                       </div>
-                      <h3 className="text-2xl font-bold tracking-tight mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-3xl font-bold tracking-tight mb-4 group-hover:text-blue-600 transition-colors">
                         <Link href="/blog/transforming-business-operations">
                           Transforming Business Operations with Data-Driven Insights
                         </Link>
                       </h3>
-                      <p className="text-muted-foreground line-clamp-3">
+                      <p className="text-lg text-muted-foreground line-clamp-3">
                         Discover how leading companies are leveraging data analytics to transform their operations,
                         increase efficiency, and drive sustainable growth in today's competitive landscape.
                       </p>
                     </div>
-                    <div className="mt-6 flex items-center gap-4">
-                      <div className="relative h-10 w-10 rounded-full overflow-hidden">
+                    <div className="mt-8 flex items-center gap-4">
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
                         <Image src="/team/sarah-johnson-avatar.jpg" alt="Author" fill className="object-cover" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium">Sarah Johnson</p>
-                        <p className="text-xs text-muted-foreground">Chief Data Officer</p>
+                        <p className="text-base font-medium">Sarah Johnson</p>
+                        <p className="text-sm text-muted-foreground">Chief Data Officer</p>
                       </div>
                     </div>
                   </div>
@@ -89,7 +78,7 @@ export default function BlogPage() {
             </AnimatedSection>
 
             {/* Blog Posts Grid */}
-            <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <BlogCard
                 title="The Future of Digital Transformation"
                 excerpt="How businesses can prepare for the next wave of digital innovation and stay ahead of the competition."
@@ -162,16 +151,20 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="w-full py-12 md:py-16 bg-muted/50">
+      <section className="w-full py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
-          <AnimatedSection className="mx-auto max-w-md text-center">
-            <h2 className="text-2xl font-bold tracking-tight">Subscribe to Our Newsletter</h2>
-            <p className="text-muted-foreground mt-2 mb-4">
-              Get the latest insights and trends delivered straight to your inbox.
+          <AnimatedSection className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight">Stay Updated</h2>
+            <p className="text-lg text-muted-foreground mt-4 mb-8">
+              Subscribe to our newsletter for the latest insights on AI and business transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <Input placeholder="Enter your email" className="flex-1" />
-              <Button className="bg-blue-600 hover:bg-blue-700">Subscribe</Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-base">Subscribe</Button>
             </div>
           </AnimatedSection>
         </div>
