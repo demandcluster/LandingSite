@@ -1,7 +1,7 @@
 # ---- Base Stage ----
 # Use an official Node.js runtime as a parent image.
-# We are using node:20-alpine as it is lightweight.
-FROM node:20-alpine AS base
+# We are using node:20 as it is more compatible with various packages.
+FROM node:20 AS base
 
 # Set the working directory in the container.
 WORKDIR /app
@@ -12,17 +12,19 @@ WORKDIR /app
 # Caching this layer will speed up subsequent builds if dependencies don't change.
 FROM base AS deps
 COPY package.json package-lock.json* ./
-RUN npm install --production
+RUN npm ci
 
 
 # ---- Builder Stage ----
 # This stage builds the Next.js application.
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
+COPY package.json package-lock.json* ./
 COPY . .
 # The NEXT_TELEMETRY_DISABLED environment variable is set to 1 to disable
 # Next.js's telemetry data collection during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV production
 RUN npm run build
 
 
@@ -35,8 +37,8 @@ WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Create a non-root user for security purposes.
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN groupadd --system --gid 1001 nodejs
+RUN useradd --system --uid 1001 nextjs
 
 # Copy the built application artifacts from the builder stage.
 # We are using the standalone output feature of Next.js for a minimal image.
