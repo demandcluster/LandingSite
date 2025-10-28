@@ -240,15 +240,7 @@ export default function AboutUsPage() {
                   className="object-contain h-16"
                 />
               </div>
-              <div className="flex justify-center p-4 transition-all">
-                <Image
-                  src="/schiphol.svg?height=80&width=200"
-                  alt="Schiphol.nl"
-                  width={200}
-                  height={80}
-                  className="object-contain h-16"
-                />
-              </div>
+              
               <div className="flex justify-center p-4 transition-all">
                 <Image
                   src="/tobeDressed.svg?height=80&width=200"
@@ -290,30 +282,7 @@ export default function AboutUsPage() {
                 <p className="text-xs text-muted-foreground">Chief Digital Officer, VD.nl</p>
               </CardContent>
             </Card>
-            <Card className="transition-all hover:shadow-md hover:-translate-y-1">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                    <Image
-                      src="/placeholder.svg?height=48&width=48"
-                      alt="Schiphol Logo"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium">Schiphol</p>
-                    <p className="text-sm text-muted-foreground">Aviation</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "Working with Demand Cluster has transformed our operational efficiency. Their solutions have helped
-                  us enhance passenger experience and streamline complex processes."
-                </p>
-                <p className="mt-4 text-sm font-medium">Marieke van der Berg</p>
-                <p className="text-xs text-muted-foreground">Technology Director, Schiphol</p>
-              </CardContent>
-            </Card>
+           
             <Card className="transition-all hover:shadow-md hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
